@@ -54,13 +54,71 @@ p {
 }
 
 /* Banner */
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 700px;
+}
 .tally-banner {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+  overflow: hidden;
+}
+.tally-banner-1,
+.tally-banner-2 {
+  box-sizing: border-box;
+}
+.tally-banner-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55%;
+  height: 50%;
+}
+.tally-banner-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+}
+.tally-banner-2 img {
+  width: 100%;
+  height: 18%;
+}
+.whatsappus {
+  display: none;
+}
+.whatsappus-below-main-banner {
+  display: inline-block;
+}
+.form-below-main-banner {
+  display: none;
+}
+.whatsappus-below-main-banner,
+.whatsappus {
+  max-width: 180px;
+  padding: 10px 20px; /* Adds padding to make it look like a button */
+  background-color: #25d366; /* WhatsApp green background color */
+  color: white; /* White text color */
+  text-align: center; /* Centers the text */
+  text-decoration: none; /* Removes the underline from the link */
+  border-radius: 15px; /* Adds rounded corners */
+  border: 2px solid #25d366; /* Border matching the background color */
+  font-size: 18px; /* Adjusts the font size */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+.whatsappus:hover {
+  background-color: white; /* Background color changes on hover */
+  color: #25d366; /* Text color changes on hover */
 }
 
 /* motto section just below banner */
 .motto {
-  margin-top: 50px;
+  margin-top: -100px;
   background-image: linear-gradient(
       to bottom,
       rgba(25, 133, 182, 0.8),
@@ -190,6 +248,12 @@ p {
   gap: 25px;
   margin-bottom: 100px;
 }
+.rate-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
 .rate-card {
   font-family: "Raleway", sans-serif;
   max-width: 350px;
@@ -223,14 +287,22 @@ p {
   font-size: 18px;
   margin-bottom: 35px;
 }
-.rate-card-btn {
+.rate-card-btn,
+.buy-now-btn,
+.enquire-now-button {
   text-decoration: none;
   color: black;
   background-color: #ffc632;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 600;
   padding: 12px 28px;
   border-radius: 24px;
   border: 0;
+}
+.enquire-now-button {
+  background-color: #a0cdec;
+  margin-top: -50px;
+  margin-bottom: 100px;
 }
 .enquire-now-btn {
   position: fixed;
@@ -254,16 +326,47 @@ p {
   white-space: nowrap; /* Prevents the text from wrapping */
   writing-mode: vertical-lr; /* Changes the text direction for a cleaner vertical appearance */
 }
-
+.rate-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 @media (max-width: 768px) {
+  .enquire-now-btn {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  .form {
+    display: none;
+  }
+  .whatsappus-below-main-banner {
+    display: none;
+  }
+  .whatsappus {
+    display: inline-block;
+  }
+  .banner-container {
+    height: 900px;
+  }
+  .form-below-main-banner {
+    display: block;
+    height: 700px;
+  }
+  .tally-banner-2 img {
+    height: 50%;
+  }
   .company-logo {
     max-width: 150px;
   }
   .nav-right {
     font-size: 1.3rem;
   }
+  .whatsappus {
+    font-size: 14px;
+    max-width: 140px;
+  }
   .motto {
-    margin-top: 0px;
+    margin-top: -400px;
     font-size: 14px;
     line-height: 1.6rem;
   }
