@@ -257,6 +257,9 @@ p {
   .features_section_text {
     width: 100%;
   }
+  .get-more {
+    margin-top: 50px;
+  }
   .get-more h1 {
     line-height: 2rem;
   }
@@ -280,6 +283,7 @@ p {
   }
   .rate-cards {
     margin-top: 50px;
+    gap: 50px;
   }
   .rate-card {
     padding: 20px 0;
