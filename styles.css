@@ -256,6 +256,10 @@ p {
 }
 
 @media (max-width: 768px) {
+  .enquire-now-btn {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
   .company-logo {
     max-width: 150px;
   }
