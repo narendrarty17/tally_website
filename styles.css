@@ -56,22 +56,18 @@ p {
 /* Banner */
 .tally-banner {
   width: 100%;
+  padding-bottom: 50px;
+  border-bottom: 2px solid lightgrey;
 }
 
 /* motto section just below banner */
 .motto {
-  margin-top: 50px;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(25, 133, 182, 0.8),
-      /* 90% opaque, 10% transparent */ rgba(25, 133, 182, 0.8)
-        /* 50% opaque, 50% transparent */
-    ),
-    url("./img/motto.jpg");
+  margin-top: 30px;
+  background-image: url("./img/motto.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 4% 6%;
+  padding: 4% 4%;
   max-width: 100%; /* Ensure it doesn’t exceed the viewport width */
   color: white;
   line-height: 2rem;
@@ -83,8 +79,9 @@ p {
   margin-top: 50px;
   display: flex;
   gap: 5%;
-  padding: 0 6%;
+  padding: 0 4%;
   flex-wrap: wrap;
+  z-index: 10;
 }
 .why_tally h2 {
   font-family: "Montserrat", sans-serif;
@@ -106,6 +103,7 @@ p {
 
 /* features section */
 .features {
+  margin-top: -120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,6 +137,7 @@ p {
 
 /* get more section */
 .get-more {
+  margin-top: -100px;
   font-family: "Raleway", sans-serif;
   display: flex;
   flex-direction: column;
@@ -147,6 +146,7 @@ p {
   align-items: center;
   justify-content: center;
   font-size: 14px;
+  background-image: url("./img/get_more/main.svg");
 }
 .get-more-section {
   display: flex;
@@ -183,7 +183,7 @@ p {
 }
 .rate-cards {
   margin-top: 100px;
-  padding: 0 6%;
+  padding: 0 4%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -279,16 +279,19 @@ p {
   .why_tally-img {
     width: 100%;
   }
+  .features {
+    margin-top: -50px;
+  }
+  .get-more {
+    margin-top: -50px;
+  }
   .features_section {
     margin-top: 100px;
-    padding: 0 6%;
+    padding: 0 4%;
   }
   .features_section_img,
   .features_section_text {
     width: 100%;
-  }
-  .get-more {
-    margin-top: 50px;
   }
   .get-more h1 {
     line-height: 2rem;
@@ -298,7 +301,7 @@ p {
     width: 100%;
   }
   .get-more-section-txt {
-    padding: 0 6%;
+    padding: 0 4%;
     margin-top: 0;
   }
   .mid-section-txt {
