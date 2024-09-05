@@ -378,7 +378,7 @@ p {
     display: none;
   }
   .motto {
-    margin-top: -420px;
+    margin-top: -450px;
     font-size: 14px;
     line-height: 1.6rem;
   }
@@ -389,6 +389,9 @@ p {
   .why_tally-text,
   .why_tally-img {
     width: 100%;
+  }
+  .why_tally h2 {
+    font-size: 38px;
   }
   .features_section {
     margin-top: 100px;
