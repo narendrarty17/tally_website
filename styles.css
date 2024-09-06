@@ -162,6 +162,9 @@ p {
   font-size: 32px;
   margin-bottom: 20px;
 }
+.features-section-text-last {
+  margin-top: 60px;
+}
 
 /* get more section */
 .get-more {
@@ -185,7 +188,7 @@ p {
   z-index: 1;
 }
 .get-more-section-img-container {
-  height: 450px;
+  /* height: 450px; */
   background-size: cover;
 }
 .get-more-section-img {
@@ -216,7 +219,6 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-  margin-bottom: 100px;
 }
 .rate-card {
   font-family: "Raleway", sans-serif;
@@ -261,6 +263,7 @@ p {
   border: 0;
 }
 .enquire-now-btn {
+  text-decoration: none;
   position: fixed;
   right: 0px; /* Distance from the right edge */
   top: 45vh; /* 70% of the viewport height */
@@ -284,6 +287,9 @@ p {
 }
 
 @media (max-width: 900px) {
+  .features-section-text-last {
+    margin-top: 0px;
+  }
   .tally-banner-container {
     height: 300px;
   }
