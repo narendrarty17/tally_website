@@ -75,7 +75,7 @@ p {
 }
 
 .tally-banner-img.prev {
-  left: -100%;
+  left: 100%;
 }
 
 .divider {
@@ -274,10 +274,7 @@ p {
   color: white;
   font-size: 18px;
   font-weight: 600;
-  border-top: 2px soild black;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  border-left: none;
+  border: 2px solid black;
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

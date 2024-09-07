@@ -12,9 +12,68 @@
     <title>Your Page Title</title>
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="styles2.css" />
-    <style>
-      /* Get more done with tally prime */
-    </style>
+     <script>
+        function openForm() {
+          document.getElementById("formModal").style.display = "block";
+        }
+
+        function closeForm() {
+          document.getElementById("formModal").style.display = "none";
+        }
+
+        function skipForm(){
+          window.location.href = "https://wa.me/919650489434";
+        }
+
+        function submitForm(event) {
+          event.preventDefault(); // Prevent default form submission behavior
+
+          // Collect form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          // EmailJS data
+          const serviceID = "service_ski5i6a";  // Replace with your actual service ID
+          const templateID = "template_av84uis";  // Replace with your actual template ID
+          const userID = "GXWCfmyu19TLdCppH";  // Replace with your actual user ID
+
+          // Send email using EmailJS API
+          fetch("https://api.emailjs.com/api/v1.0/email/send", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              service_id: serviceID,
+              template_id: templateID,
+              user_id: userID,
+              template_params: {
+                name: name,
+                email: email,
+                message: message,
+              }
+            })
+          })
+           .then((response) => {
+              if (!response.ok) {
+                // If response is not okay, throw an error
+                throw new Error('Email sending failed');
+              }
+              alert("Form successfully submitted and email sent!");
+            })
+            .then(() => {
+              // Redirect to WhatsApp after email is successfully sent
+              setTimeout(() => {
+                window.location.href = "https://wa.me/919650489434";
+              }, 100); 
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              alert("Failed to send email, please try again.");
+            });
+        }
+      </script>
   </head>
   <body>
     <nav class="navigation">
@@ -32,13 +91,14 @@
         <div class="tally-banner" id="banner">
             <div class="tally-banner-1">
                 <img
-                    width="100%"
+                    width="100%
                     height="auto"
                     src="./img/banners/banner_landing_page.jpg" 
                 />
                 <a 
                   class="whatsappus-below-main-banner"
-                  href="https://wa.me/919650489434"
+                  href="javascript:void(0);"
+                  onClick="openForm()"
                 >Whatsapp Us</a>
             </div>
            <div class="tally-banner-2">
@@ -47,7 +107,8 @@
             />
             <a 
                 class="whatsappus"
-                href="https://wa.me/919650489434"
+                href="javascript:void(0)"
+                onClick="openForm()"
             >Whatsapp Us</a>
             <iframe
               class="form iframe"
@@ -69,6 +130,65 @@
               allowfullscreen
         ></iframe>
     </div>
+
+     <!-- Form Modal -->
+    <div id="formModal" style="display:none;">
+      <form id="contactForm" onsubmit="submitForm(event)">
+        <div class="form-top-bar">
+          <h2>Contact Us</h2>
+          <a class="skip" href="https://wa.me/919650489434">Skip</a>
+        </div>
+        <div class="input-field">
+          <label for="name">Your Name:</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name"
+            placeholder="Enter Your Name" 
+            required
+          />
+        </div>
+        
+        <div class="input-field">
+          <label for="email">Your Email:</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email"
+            placeholder="abcd@xyz.com" 
+            required
+          >
+        </div>
+        
+        <div class="input-field">
+          <label for="message">Message:</label>
+          <textarea 
+            id="message" 
+            name="message"
+            placeholder="Your message here" 
+            required
+          ></textarea>
+        </div>
+        
+        <div class="form-buttons">
+          <button 
+            type="submit" 
+            class="form-button"
+          >
+            Submit
+          </button>
+          <button 
+            type="button" 
+            class="form-button close-button" 
+            onclick="closeForm()"
+          >
+            Close
+          </button>
+        </div>
+        
+      </form>
+    </div>
+
     <div class="divider"></div>
     <div class="motto">
       <p>
@@ -186,7 +306,7 @@
       >
         <img 
           class="get-more-section-img"
-          src="./img/tally-desktop.png" 
+          src="./img/get_more/tally-desktop.png" 
           alt="tally desktop" 
         />
       </div>
@@ -204,7 +324,7 @@
         >
           <img
             class="get-more-section-img"
-            src="./img/tally-sheet.png" 
+            src="./img/get_more/tally-sheet.png" 
             alt="tally sheet" 
           />
         </div>
@@ -216,7 +336,7 @@
         >
           <img 
           class="get-more-section-img"
-          src="./img/tally-laptop.png" 
+          src="./img/get_more/tally-laptop.png" 
           alt="tally laptop" 
         />
         </div>
