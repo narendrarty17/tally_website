@@ -450,7 +450,7 @@ form {
 }
 @media (max-width: 768px) {
   .banner-container {
-    height: 1200px;
+    height: 1000px;
   }
   .features-section-text-last {
     margin-top: 0px;
