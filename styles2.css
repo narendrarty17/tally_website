@@ -387,7 +387,7 @@ form {
     display: inline-block;
   }
   .banner-container {
-    height: 1180px;
+    height: 1100px;
   }
   .whatsappus {
     display: block;
@@ -415,6 +415,9 @@ form {
     padding: 0 4%;
     justify-content: space-between;
     margin: 30px 0;
+  }
+  .tally-banner-2-img-below-main-banner img {
+    width: 26%;
   }
   .whatsappus {
     font-size: 14px;
