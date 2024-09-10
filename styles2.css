@@ -118,7 +118,7 @@ p {
   color: #25d366; /* Text color changes on hover */
 }
 
-tally-banner-2-img-below-main-banner {
+.tally-banner-2-img-below-main-banner {
   display: none;
 }
 
@@ -482,7 +482,6 @@ form {
     display: none;
   }
   .tally-banner-2-img-below-main-banner {
-    display: block;
     width: 100%;
     display: flex;
     align-items: center;
