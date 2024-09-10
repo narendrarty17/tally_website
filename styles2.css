@@ -449,11 +449,14 @@ form {
   align-items: center;
 }
 @media (max-width: 768px) {
+  .company-logo {
+    height: 130px;
+  }
   .nav-right {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .company-telephone {
-    height: 24px;
+    height: 20px;
   }
   .banner-container {
     height: 1100px;
