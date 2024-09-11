@@ -372,10 +372,8 @@ p {
     height: 350px;
     background-size: contain;
   }
-  .rate-cards-container {
-    padding: 5%;
-  }
   .rate-cards {
+    padding: 5%;
     margin-top: 50px;
     gap: 50px;
   }
