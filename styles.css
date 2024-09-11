@@ -297,6 +297,10 @@ p {
 }
 
 @media (max-width: 768px) {
+  .navigation {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   .tally-banner-container {
     margin-top: -30px;
     height: 460px;
