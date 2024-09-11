@@ -450,15 +450,20 @@ form {
 }
 @media (max-width: 768px) {
   .company-logo {
-    height: 130px;
+    height: 120px;
   }
-  .nav-right {
-    font-size: 0.8rem;
+  .navigation {
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
-  .company-telephone {
-    height: 20px;
+  .nav-right img {
+    height: 1.1rem;
+  }
+  .nav-right p {
+    font-size: 0.9rem;
   }
   .banner-container {
+    margin-top: -20px;
     height: 1100px;
   }
   .features-section-text-last {
