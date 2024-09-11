@@ -298,14 +298,14 @@ p {
 
 @media (max-width: 768px) {
   .navigation {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
   .nav-right img {
-    height: 18px;
+    height: 1.1rem;
   }
   .nav-right p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .tally-banner-container {
     margin-top: -30px;
