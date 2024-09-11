@@ -306,12 +306,13 @@ p {
     font-size: 14px;
   }
   .company-logo {
-    max-width: 100px;
+    max-width: 120px;
   }
   .nav-right {
     font-size: 1.3rem;
   }
   .motto {
+    margin-top: -50px;
     font-size: 14px;
     line-height: 1.6rem;
   }
