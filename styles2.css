@@ -450,7 +450,7 @@ form {
 }
 @media (max-width: 768px) {
   .company-logo {
-    height: 120px;
+    max-width: 120px;
   }
   .navigation {
     padding-top: 6px;
@@ -505,9 +505,6 @@ form {
   }
   .tally-banner-2-img-below-main-banner img {
     width: 30%;
-  }
-  .company-logo {
-    max-width: 150px;
   }
   .nav-right {
     font-size: 1.3rem;
