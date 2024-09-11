@@ -74,6 +74,30 @@
               alert("Failed to send email, please try again.");
             });
         }
+
+        function setHrefBasedOnScreenSize() {
+            const buyNowBtns = document.getElementsByClassName('buy-now-btn');
+            const enquireNowButtons = document.getElementsByClassName('enquire-now-button');
+
+            const href = window.innerWidth > 768 ? "#form1" : "#form2"; // Choose the href based on screen size
+
+            // Loop through all buy-now buttons and set their href
+            for (let i = 0; i < buyNowBtns.length; i++) {
+                buyNowBtns[i].setAttribute('href', href);
+            }
+
+            // Loop through all enquire-now buttons and set their href
+            for (let i = 0; i < enquireNowButtons.length; i++) {
+                enquireNowButtons[i].setAttribute('href', href);
+            }
+        }
+
+        // Call the function when the page loads
+        setHrefBasedOnScreenSize();
+
+        // Call the function when the window is resized
+        window.addEventListener('resize', setHrefBasedOnScreenSize);
+
       </script>
   </head>
   <body>
@@ -112,7 +136,7 @@
                 onClick="openForm()"
             >Whatsapp Us</a>
             <iframe
-              id="form"
+              id="form1"
               class="form iframe"
               width="100%"
               height="350"
@@ -127,6 +151,7 @@
             src="./img/banners/banner_logo_landing_page2.jpg" 
           />
           <a 
+                id="near-form"
                 class="whatsappus2"
                 href="javascript:void(0)"
                 onClick="openForm()"
@@ -360,7 +385,6 @@
             <div class="rate-card-container">
                 <section 
                     class="rate-card"
-                    onclick="window.location.href='https://izoe.in/contact-us';"
                 >
                     <img
                         class="rate-card-logo"
@@ -379,75 +403,79 @@
                     <p class="rate-card-dis">+18% GST (INR 4,050)</p>
                     <a 
                         class="buy-now-btn"
-                        href="https://izoe.in/contact-us" 
+                        href="#"
                     >
                         Buy Now    
                     </a>
                 </section>
                 
             </div>
-        <div class="rate-card-container">
-            <section 
-                class="rate-card"
-                onclick="window.location.href='https://izoe.in/contact-us';"
-            >
-                <img
-                    class="rate-card-logo"
-                    src="./img/TallyPrime-logo.webp" 
-                    alt="tally prime logo" 
-                />
-                <h2 class="rate-card-plan">
-                GOLD
-                </h2>
-                <br />
-                <p class="rate-card-plan-desc">
-                Unlimited multi-user edition <br />
-                For multiple PCs on LAN <br />
-                environment
-                </p>
-                <h1 class="rate-card-price">INR 67,500</h1>
-                <p class="rate-card-dis">+18% GST (INR 12,150)</p>
-                <a 
-                    class="buy-now-btn"
-                    href="https://izoe.in/contact-us" 
-                >
-                    Buy Now    
-                </a>
-            </section>
-        </div>
-        <div class="rate-card-container">
-            <section 
-                class="rate-card"
-                onclick="window.location.href='https://izoe.in/contact-us';"
-            >
-                <img
-                    class="rate-card-logo"
-                    src="./img/TallyPrime-logo.webp" 
-                    alt="tally prime logo" 
-                />
-                <h2 class="rate-card-plan">
-                Tally Prime Server <br />
-                (TPS)
-                </h2>
-                <p class="rate-card-plan-desc">
-                For medium and large enterprises<br />
-                (TallyPrime Server works with<br />
-                TallyPrime Gold licence)
-                </p>
-                <h1 class="rate-card-price">INR 2,70,000</h1>
-                <p class="rate-card-dis">+18% GST (INR 48,600)</p>
-                <a 
-                    class="buy-now-btn"
-                    href="https://izoe.in/contact-us" 
-                >
-                    Buy Now    
-                </a>
-            </section>
-        </div>
-        </div>
+            <div class="rate-card-container">
+              <section 
+                  class="rate-card"
+              >
+                  <img
+                      class="rate-card-logo"
+                      src="./img/TallyPrime-logo.webp" 
+                      alt="tally prime logo" 
+                  />
+                  <h2 class="rate-card-plan">
+                  GOLD
+                  </h2>
+                  <br />
+                  <p class="rate-card-plan-desc">
+                  Unlimited multi-user edition <br />
+                  For multiple PCs on LAN <br />
+                  environment
+                  </p>
+                  <h1 class="rate-card-price">INR 67,500</h1>
+                  <p class="rate-card-dis">+18% GST (INR 12,150)</p>
+                  <a 
+                      class="buy-now-btn"
+                      href="#"
+                  >
+                      Buy Now    
+                  </a>
+              </section>
+            </div>
+            <div class="rate-card-container">
+              <section 
+                  class="rate-card"
+              >
+                  <img
+                      class="rate-card-logo"
+                      src="./img/TallyPrime-logo.webp" 
+                      alt="tally prime logo" 
+                  />
+                  <h2 class="rate-card-plan">
+                  Tally Prime Server <br />
+                  (TPS)
+                  </h2>
+                  <p class="rate-card-plan-desc">
+                  For medium and large enterprises<br />
+                  (TallyPrime Server works with<br />
+                  TallyPrime Gold licence)
+                  </p>
+                  <h1 class="rate-card-price">INR 2,70,000</h1>
+                  <p class="rate-card-dis">+18% GST (INR 48,600)</p>
+                  <a 
+                      class="buy-now-btn"
+                      href="#"
+                  >
+                      Buy Now    
+                  </a>
+              </section>
+            </div>
+       </div>
+       <a 
+            class="enquire-now-button"
+            href="#"
+          >
+            Enquire Now    
+          </a>
     </div>
-    <a class="enquire-now-btn" href="https://izoe.in/contact-us">
+    <!-- <a class="enquire-now-btn" href="https://izoe.in/contact-us">
       Enquire Now
-    </a>
+    </a> -->
   </body>
 </html>
