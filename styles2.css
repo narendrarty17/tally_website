@@ -510,8 +510,10 @@ form {
     font-size: 1.3rem;
   }
   .whatsappus {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: bold;
     max-width: 140px;
+    padding: 4px 6px;
   }
   .divider {
     display: none;
