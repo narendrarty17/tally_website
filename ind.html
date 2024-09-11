@@ -27,13 +27,13 @@
     </nav>
     <div class="tally-banner-container">
       <img 
-        class="tally-banner-img" 
-        src="./img/banners/licence_webpage.jpg" 
+        class="tally-banner-img"
+        src="./img/banners/licence_webpage.jpg"
         alt="Tally Banner 1" 
       />
       <img 
-        class="tally-banner-img" 
-        src="./img/banners/Banner_02.jpg" 
+        class="tally-banner-img"
+        src="./img/banners/Banner_02.jpg"
         alt="Tally Banner 2" 
       />
     </div>
@@ -292,6 +292,27 @@
     <script>
       // Step 1: Select all images inside the container
       const images = document.querySelectorAll('.tally-banner-img');
+      const desktopImages = [
+          './img/banners/licence_webpage.jpg',
+          './img/banners/Banner_02.jpg',
+        ];
+        const mobileImages = [
+          './img/banners/licence_webpage_mobile.jpg',
+          './img/banners/Banner_02_mobile.jpg',
+        ];
+
+        function updateImages() {
+          const windowWidth = window.innerWidth;
+          const selectedImages = windowWidth < 768 ? mobileImages : desktopImages;
+
+          images.forEach((img, index) => {
+            img.src = selectedImages[index];
+          });
+        }
+
+        // Update images on page load and resize
+        window.addEventListener('load', updateImages);
+        window.addEventListener('resize', updateImages);
       let currentIndex = 0; // Track the index of the current image
 
       // Step 2: Show the first image
