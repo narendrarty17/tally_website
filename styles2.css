@@ -569,8 +569,10 @@ form {
     height: 350px;
     background-size: contain;
   }
+  .rate-cards-container {
+    padding: 0 5%;
+  }
   .rate-cards {
-    padding: 0 2%;
     margin-top: 50px;
     gap: 50px;
   }
