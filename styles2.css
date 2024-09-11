@@ -570,6 +570,7 @@ form {
     background-size: contain;
   }
   .rate-cards {
+    padding: 0 2%;
     margin-top: 50px;
     gap: 50px;
   }
