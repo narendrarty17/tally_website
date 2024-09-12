@@ -126,96 +126,38 @@ p {
   position: fixed;
   left: 37%;
   top: 15%;
-  width: 26%;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 40%;
+  height: 400px;
   display: flex;
   justify-content: center;
+  background-color: #3169b3;
   align-items: center;
   z-index: 20;
   padding: 0;
+  border: 1px solid lightgray;
   border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 10px;
 }
-
-#contactForm {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-bottom: 20px;
-  color: #2d3748;
+#formModal iframe {
+  border-radius: 0 0 10px 10px; /* Rounds the bottom corners */
 }
-
-.form-top-bar {
-  border-radius: 10px 10px 0 0;
-  width: 100%;
-  height: 4rem;
-  text-align: center;
+.form-header {
+  padding: 15px 25px;
   display: flex;
+  color: white;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  background-color: #1ea3c6;
-  margin: 0;
-  padding: 5%;
 }
-.skip {
-  color: white;
-}
-.input-field,
-.form-buttons {
-  padding: 0 5%;
-}
-.form-buttons {
-  gap: 5px;
-}
-.input-field,
-.form-buttons {
-  display: flex;
-  flex-direction: column;
-  width: 92%;
-}
-.input-field input {
-  height: 30px;
-  padding: 5px;
-  border: 1px solid lightgrey;
+#skip-button {
+  padding: 3px 8px;
+  background-color: #25d366;
   border-radius: 4px;
-}
-.input-field textarea {
-  padding: 5px;
-  border: 1px solid lightgray;
-  border-radius: 4px;
-}
-.form-button {
-  width: 100%;
-  background-color: #1ea3c6;
-  height: 30px;
+  font-weight: 600;
+  text-decoration: none;
   color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 20px;
-  height: 30px;
-  border: none;
+  border: 0;
 }
-.close-button {
-  background-color: white;
-  border: 1px solid gray;
-  color: black;
-}
-.input-field label {
-  font-weight: bold;
-}
-
-textarea {
-  height: 80px;
-}
-
-form {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 @media (max-width: 764px) {
   #formModal {
     width: 90%;
@@ -323,6 +265,9 @@ form {
   justify-content: center;
   font-size: 14px;
   background-image: url("./img/get_more/main.svg");
+  background-size: contain; /* Ensures the image covers the entire div */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 .get-more-section {
   display: flex;
@@ -333,11 +278,12 @@ form {
   z-index: 1;
 }
 .get-more-section-img-container {
-  height: 450px;
-  background-size: cover;
+  background-size: contain; /* Ensures the image covers the entire div */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 .get-more-section-img {
-  width: auto;
+  max-width: auto;
 }
 .get-more-section-txt {
   margin-top: 50px;

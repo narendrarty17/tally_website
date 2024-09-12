@@ -178,6 +178,9 @@ p {
   justify-content: center;
   font-size: 14px;
   background-image: url("./img/get_more/main.svg");
+  background-size: contain; /* Ensures the image covers the entire div */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 .get-more-section {
   display: flex;
@@ -188,11 +191,12 @@ p {
   z-index: 1;
 }
 .get-more-section-img-container {
-  /* height: 450px; */
-  background-size: cover;
+  background-size: contain; /* Ensures the image covers the entire div */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 .get-more-section-img {
-  width: auto;
+  max-width: auto;
 }
 .get-more-section-txt {
   margin-top: 50px;
