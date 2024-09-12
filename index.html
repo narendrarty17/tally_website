@@ -14,79 +14,7 @@
     <link rel="stylesheet" href="styles2.css" />
      <script>
         function openForm() {
-          document.getElementById("formModal").style.display = "block";
-          monitorIframe();
-        }
-
-        // Function to monitor the iframe for URL changes
-        function monitorIframe() {
-          const iframe = document.getElementById('form-iframe');
-          let previousSrc = iframe.src;
-
-          setInterval(() => {
-            if (iframe.src !== previousSrc) {
-              // URL has changed, likely indicating a form submission
-              // Redirect to WhatsApp
-              window.location.href = "https://wa.me/919650489434"; // WhatsApp link
-            }
-          }, 200); // Check every second
-        }
-
-        function closeForm() {
-          document.getElementById("formModal").style.display = "none";
-        }
-
-        function skipForm(){
           window.location.href = "https://wa.me/919650489434";
-        }
-
-        function submitForm(event) {
-          event.preventDefault(); // Prevent default form submission behavior
-
-          // Collect form values
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const message = document.getElementById("message").value;
-
-          // EmailJS data
-          const serviceID = "service_ski5i6a";  // Replace with your actual service ID
-          const templateID = "template_av84uis";  // Replace with your actual template ID
-          const userID = "GXWCfmyu19TLdCppH";  // Replace with your actual user ID
-
-          // Send email using EmailJS API
-          fetch("https://api.emailjs.com/api/v1.0/email/send", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              service_id: serviceID,
-              template_id: templateID,
-              user_id: userID,
-              template_params: {
-                name: name,
-                email: email,
-                message: message,
-              }
-            })
-          })
-           .then((response) => {
-              if (!response.ok) {
-                // If response is not okay, throw an error
-                throw new Error('Email sending failed');
-              }
-              alert("Form successfully submitted and email sent!");
-            })
-            .then(() => {
-              // Redirect to WhatsApp after email is successfully sent
-              setTimeout(() => {
-                window.location.href = "https://wa.me/919650489434";
-              }, 100); 
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-              alert("Failed to send email, please try again.");
-            });
         }
 
         function setHrefBasedOnScreenSize() {
@@ -179,25 +107,6 @@
               frameborder="0"
               allowfullscreen
         ></iframe>
-    </div>
-
-     <!-- Form Modal -->
-    <div id="formModal" style="display:none;">
-      <div class="form-header">
-        <h2>Please Fill so we don't lose you</h2>
-        <!-- Skip Button -->
-        <button id="skip-button" onclick="skipForm();">
-          Skip
-        </button>
-      </div>
-      <iframe
-            id="form-iframe"
-            width="100%"
-            height="400px"
-            src="https://izoe.akountercrm.com/forms/wtl/0ae473a8faade41ebaabc7d70124455c"
-            frameborder="0"
-            allowfullscreen
-      ></iframe>
     </div>
 
     <div class="divider"></div>
