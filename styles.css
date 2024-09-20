@@ -97,6 +97,11 @@ body {
   position: absolute;
   top: 50px;
 }
+#nav-link-cloud-dropdown-below-nav,
+#nav-link-tally-dropdown-below-nav,
+#nav-link-cyber-dropdown-below-nav {
+  display: none;
+}
 li a {
   text-decoration: none; /* Removes underline */
   color: inherit; /* Inherits color from parent */

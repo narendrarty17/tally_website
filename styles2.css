@@ -76,6 +76,11 @@ body {
   position: absolute;
   top: 50px;
 }
+#nav-link-cloud-dropdown-below-nav,
+#nav-link-tally-dropdown-below-nav,
+#nav-link-cyber-dropdown-below-nav {
+  display: none;
+}
 li a {
   text-decoration: none; /* Removes underline */
   color: inherit; /* Inherits color from parent */
@@ -132,6 +137,17 @@ li a:focus {
   height: auto;
   /* Ensuring the image doesn't add any extra space */
   display: block;
+}
+#menu-bar {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+}
+.short-horizontal-line {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
 }
 
 p {
@@ -536,6 +552,9 @@ p {
 @media (max-width: 900px) {
   .navigation-links {
     display: none;
+  }
+  #menu-bar {
+    display: flex;
   }
 }
 

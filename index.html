@@ -67,6 +67,18 @@
 
       <script>
         document.addEventListener('DOMContentLoaded', function () {
+         // making navigation-links-below-nav visible on menu-bar click
+            document.getElementById('menu-bar').addEventListener('click', function() {
+            const navLinks = document.querySelector('.navigation-links-below-nav');
+            
+            // Toggle the visibility
+            if (navLinks.style.display === 'none' || navLinks.style.display === '') {
+              navLinks.style.display = 'block'; // Show the navigation links
+            } else {
+              navLinks.style.display = 'none'; // Hide the navigation links
+            }
+            });
+
           // Common function to handle dropdowns with hover
           function setupDropdown(toggleButtonId, dropdownId) {
             const toggleButton = document.getElementById(toggleButtonId);
@@ -169,8 +181,13 @@
         />
         <p>+91 - 9919748714</p>
       </div>
+      <div id="menu-bar">
+        <div class="short-horizontal-line"></div>
+        <div class="short-horizontal-line"></div>
+        <div class="short-horizontal-line"></div>
+      </div>
     </nav>
-     <div class="navigation-links-below-nav"></div>
+     <div class="navigation-links-below-nav">
         <div class="navigation-link-below-nav">
           Home
         </div>
