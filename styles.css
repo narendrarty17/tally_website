@@ -102,7 +102,7 @@ body {
 #nav-link-cyber-dropdown-below-nav {
   display: none;
 }
-li a {
+a {
   text-decoration: none; /* Removes underline */
   color: inherit; /* Inherits color from parent */
   font-weight: normal; /* Resets font weight */
@@ -114,6 +114,9 @@ li a {
   outline: none; /* Removes outline when focused */
   display: inline; /* Ensures the display is inline */
   cursor: pointer; /* Ensures the cursor appears as a pointer */
+}
+a:hover {
+  color: #4db5ef;
 }
 
 li a:visited,
@@ -436,6 +439,18 @@ p {
 .footer-list-items li {
   display: flex;
   gap: 10px;
+}
+.footer-faebook-linkedin-logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.link {
+  display: flex;
+  gap: 20px;
+}
+.link:hover {
+  color: #4db5ef;
 }
 .horizontal-line {
   border: none;
