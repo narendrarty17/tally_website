@@ -41,10 +41,126 @@
         window.addEventListener('resize', setHrefBasedOnScreenSize);
 
       </script>
+         <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const dropdown = document.getElementByClass('nav-link-dropdown');
+
+        // Function to open the dropdown programmatically
+        function openDropdown() {
+          dropdown.size = dropdown.options.length; // Set the size to make all options visible
+        }
+
+        // Function to reset the dropdown when an option is selected
+        dropdown.addEventListener('change', () => {
+          dropdown.size = 0; // Collapse the dropdown after selecting an option
+        });
+
+        // Trigger the dropdown to open when the page loads
+        openDropdown();
+
+        // Keep the dropdown open when it loses focus
+        dropdown.addEventListener('blur', () => {
+          setTimeout(openDropdown, 100); // Reopen after blur event
+        });
+      });
+    </script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // Common function to handle dropdowns with hover
+          function setupDropdown(toggleButtonId, dropdownId) {
+            const toggleButton = document.getElementById(toggleButtonId);
+            const dropdown = document.getElementById(dropdownId);
+
+            // Show dropdown on mouse enter
+            toggleButton.addEventListener('mouseenter', function () {
+              closeAllDropdowns(); // Close all other dropdowns
+              dropdown.style.display = 'block'; // Show current dropdown
+            });
+
+            // Hide dropdown on mouse leave if not hovering over dropdown or toggle button
+            toggleButton.addEventListener('mouseleave', function () {
+              setTimeout(() => {
+                if (!dropdown.matches(':hover') && !toggleButton.matches(':hover')) {
+                  dropdown.style.display = 'none'; // Hide dropdown
+                }
+              }, 100); // Delay to allow hover on dropdown
+            });
+
+            dropdown.addEventListener('mouseenter', function () {
+              dropdown.style.display = 'block'; // Keep dropdown open if hovering over it
+            });
+
+            dropdown.addEventListener('mouseleave', function () {
+              dropdown.style.display = 'none'; // Hide dropdown if not hovering
+            });
+          }
+
+          // Function to close all dropdowns
+          function closeAllDropdowns() {
+            const allDropdowns = document.querySelectorAll('.nav-link-dropdown');
+            allDropdowns.forEach(dropdown => dropdown.style.display = 'none');
+          }
+
+          // Setting up each dropdown
+          setupDropdown('nav-link-cloud', 'nav-link-cloud-dropdown');
+          setupDropdown('nav-link-tally', 'nav-link-tally-dropdown');
+          setupDropdown('nav-link-cyber', 'nav-link-cyber-dropdown');
+
+           // Setting up each dropdown -below-nav
+          setupDropdown('nav-link-cloud-below-nav', 'nav-link-cloud-dropdown-below-nav');
+          setupDropdown('nav-link-tally-below-nav', 'nav-link-tally-dropdown-below-nav');
+          setupDropdown('nav-link-cyber-below-nav', 'nav-link-cyber-dropdown-below-nav');
+        });
+      </script>
+
   </head>
   <body>
     <nav class="navigation">
       <img class="company-logo" src="./img/izoe.svg" alt="Company Logo" />
+      <div class="navigation-links">
+        <div class="navigation-link">
+          Home
+        </div>
+        <div class="navigation-link">
+          <div id="nav-link-cloud" class="nav-link-header">
+            <div>Cloud Services</div>
+            <img width="12px" src="./img/navigation/openArrow.svg" alt="close" />
+          </div>
+          <ul id="nav-link-cloud-dropdown" class="nav-link-dropdown">
+            <li><a href="https://izoe.in/services/office-on-cloud">Akounter Cloud</a></li>
+            <li><a href="https://izoe.in/services/quickbooks">Quickbooks on Cloud</a></li>
+          </ul>
+        </div>
+        <div class="navigation-link">
+          <div id="nav-link-tally" class="nav-link-header">
+            <div>Tally Services</div>
+            <img width="12px" src="./img/navigation/openArrow.svg" alt="close" />
+          </div>
+          <ul id="nav-link-tally-dropdown" class="nav-link-dropdown">
+            <li><a href="https://izoe.in/services/tally-on-cloud">Tally on Cloud</a></li>
+            <li><a href="https://izoe.in/services/tally-license.html">Tally licence</a></li>
+          </ul>
+        </div>
+        <div class="navigation-link">
+          Akounter CRM
+        </div>
+        <div class="navigation-link">
+          <div id="nav-link-cyber" class="nav-link-header">
+            <div>Cyber Security</div>
+            <img width="12px" src="./img/navigation/openArrow.svg" alt="close" />
+          </div>
+          <ul id="nav-link-cyber-dropdown" class="nav-link-dropdown">
+            <li><a href="https://izoe.in/services/akounter-backup">Akounter Backup</a></li>
+          </ul>
+        </div>
+        <div class="navigation-link">
+          Blogs
+        </div>
+        <div class="navigation-link">
+          Get in Touch
+        </div>
+      </div>
       <div class="nav-right">
         <img
           class="company-telephone"
@@ -54,6 +170,49 @@
         <p>+91 - 9919748714</p>
       </div>
     </nav>
+     <div class="navigation-links-below-nav"></div>
+        <div class="navigation-link-below-nav">
+          Home
+        </div>
+        <div class="navigation-link-below-nav">
+          <div id="nav-link-cloud-below-nav" class="nav-link-header-below-nav">
+            <div>Cloud Services</div>
+            <img width="12px" src="./img/navigation/openArrow.svg" alt="close" />
+          </div>
+          <ul id="nav-link-cloud-dropdown-below-nav" class="nav-link-dropdown">
+            <li><a href="https://izoe.in/services/office-on-cloud">Akounter Cloud</a></li>
+            <li><a href="https://izoe.in/services/quickbooks">Quickbooks on Cloud</a></li>
+          </ul>
+        </div>
+        <div class="navigation-link-below-nav">
+          <div id="nav-link-tally-below-nav" class="nav-link-header-below-nav">
+            <div>Tally Services</div>
+            <img width="12px" src="./img/navigation/openArrow.svg" alt="close" />
+          </div>
+          <ul id="nav-link-tally-dropdown-below-nav" class="nav-link-dropdown">
+            <li><a href="https://izoe.in/services/tally-on-cloud">Tally on Cloud</a></li>
+            <li><a href="https://izoe.in/services/tally-license.html">Tally licence</a></li>
+          </ul>
+        </div>
+        <div class="navigation-link-below-nav">
+          Akounter CRM
+        </div>
+        <div class="navigation-link-below-nav">
+          <div id="nav-link-cyber-below-nav" class="nav-link-header-below-nav">
+            <div>Cyber Security</div>
+            <img width="12px" src="./img/navigation/openArrow.svg" alt="close" />
+          </div>
+          <ul id="nav-link-cyber-dropdown-below-nav" class="nav-link-dropdown">
+            <li><a href="https://izoe.in/services/akounter-backup">Akounter Backup</a></li>
+          </ul>
+        </div>
+        <div class="navigation-link-below-nav">
+          Blogs
+        </div>
+        <div class="navigation-link-below-nav">
+          Get in Touch
+        </div>
+    </div>
     <div class="banner-container">
         <div class="tally-banner" id="banner">
             <div class="tally-banner-1">
@@ -368,8 +527,65 @@
             Enquire Now    
           </a>
     </div>
-    <!-- <a class="enquire-now-btn" href="https://izoe.in/contact-us">
-      Enquire Now
-    </a> -->
+    <div class="footer">
+      <div class="footer-upper">
+        <div class="footer-section">
+          <h3 class="footer-section-title" ">
+            About Us
+          </h3>
+          <p>
+            At iZoe, we intend to be the frontrunners in bringing best suited solutions for business problems that make finance function more productive and efficient.
+            The key to our delivery lies in simplification and automation of standard processes thereby driving efficiency (in terms of cost and human capital). We find scalable solution for generic problem from the best tech solution providers across the globe and manage the same using our in-house tech team through the lifecycle inclding on-boarding and post sales support.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-section-title">
+            Resources
+          </h3>
+          <ul class="footer-list-items">
+            <li>Home</li>
+            <li>Get in Touch</li>
+            <li>Contact Us</li>
+            <li>Blogs</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-section-title">
+            Services
+          </h3>
+          <ul class="footer-list-items">
+            <li>Akounter Cloud</li>
+            <li>Quickbooks on Cloud</li>
+            <li>Tally On Cloud</li>
+            <li>Akounter CRM</li>
+            <li>Akounter Backup</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-section-title">
+            Contact Us
+          </h3>
+          <ul class="footer-list-items">
+            <li>
+              <img width="20px" src="./img/footer/location.svg" alt="address" />
+              <p>22B, Tower B2, Spaze IT Park,<br />Sohna Road, Gurgaon, Haryana</p>
+            </li>
+            <li>
+              <img width="20px" src="./img/footer/phone.svg" alt="contact number" />
+              <p>+91-729-005-3570</p>
+            </li>
+            <li>
+              <img width="20px" src="./img/footer/mail.svg" alt="mail" />
+              <p>sales@izoe.in</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <hr class="horizontal-line" />
+        <p class="copyright">Copyright @2020:iZoe</p>
+      </div>
+    </div>
   </body>
 </html>

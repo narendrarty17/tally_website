@@ -32,13 +32,99 @@ body {
   display: block;
   margin: -25px 0;
 }
+.navigation-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+}
+.navigation-link {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  cursor: pointer;
+}
+.navigation-link:hover {
+  color: #4db5ef;
+}
+.nav-link-header {
+  display: flex;
+  gap: 1px;
+  cursor: pointer;
+}
+.nav-link-dropdown {
+  list-style-type: none;
+  color: #5b5b5b;
+  display: flex;
+  padding-top: 10px;
+  background-color: white;
+  z-index: 20;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust values as needed */
+}
+.nav-link-dropdown li {
+  padding: 10px;
+}
+.nav-link-dropdown li:hover {
+  background-color: #4db5ef;
+  color: white;
+}
+#nav-link-cloud-dropdown,
+#nav-link-tally-dropdown,
+#nav-link-cyber-dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+}
+li a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits color from parent */
+  font-weight: normal; /* Resets font weight */
+  font-size: inherit; /* Inherits font size from parent */
+  padding: 0; /* Resets padding */
+  margin: 0; /* Resets margin */
+  border: none; /* Removes any borders */
+  background: none; /* Removes background color */
+  outline: none; /* Removes outline when focused */
+  display: inline; /* Ensures the display is inline */
+  cursor: pointer; /* Ensures the cursor appears as a pointer */
+}
 
+li a:visited,
+li a:active {
+  color: inherit; /* Ensures visited and active states inherit color */
+}
+
+li a:focus {
+  outline: none; /* Removes the focus outline */
+}
 .nav-right {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 1.4rem;
   font-weight: 500;
+}
+
+.navigation-links-below-nav {
+  width: 100%;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #5b5b5b;
+}
+.navigation-link-below-nav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  cursor: pointer;
+}
+.nav-link-header-below-nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 .company-telephone {
@@ -394,13 +480,90 @@ p {
   flex-direction: column;
   align-items: center;
 }
+.footer {
+  background-color: black;
+  color: white;
+}
+.footer-upper,
+.copyright {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.footer-upper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 30%;
+}
+.footer-section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+.footer-section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  border-bottom: 4px solid #4db5ef;
+}
+.footer-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+}
+.footer-list-items li {
+  display: flex;
+  gap: 10px;
+}
+.horizontal-line {
+  border: none;
+  background-color: gray;
+  height: 1px;
+}
+
+@media (max-width: 900px) {
+  .navigation-links {
+    display: none;
+  }
+  .navigation-links-below-nav {
+    display: flex;
+  }
+}
+
 @media (max-width: 768px) {
+  .footer-section {
+    width: 100%;
+  }
+  .footer-upper {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+  .footer-section {
+    width: 100%;
+    max-width: 100%;
+  }
   .company-logo {
     max-width: 120px;
   }
   .navigation {
     padding-top: 6px;
     padding-bottom: 6px;
+  }
+  .navigation-links {
+    display: none;
   }
   .nav-right img {
     height: 1.1rem;
