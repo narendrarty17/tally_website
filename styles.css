@@ -474,6 +474,9 @@ p {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .footer-list-items {
+    padding-left: 30px;
+  }
   .footer-section {
     width: 100%;
     max-width: 100%;
