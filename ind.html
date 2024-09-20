@@ -39,33 +39,18 @@
 
       <script>
           document.addEventListener('DOMContentLoaded', function () {
-            // Handle the dropdown toggle
-            document.querySelectorAll('.nav-link-header-below-nav').forEach(function(header) {
-              header.addEventListener('click', function(event) {
-                // Prevent the click event from propagating to the parent
-                event.stopPropagation();
 
-                // Toggle the corresponding dropdown
-                const dropdown = this.nextElementSibling; // The next sibling is the dropdown
-                if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-                  dropdown.style.display = 'block';
-                } else {
-                  dropdown.style.display = 'none';
-                }
-              });
-            });
-            
             // making navigation-links-below-nav visible on menu-bar click
             document.getElementById('menu-bar').addEventListener('click', function() {
             const navLinks = document.querySelector('.navigation-links-below-nav');
-              
+            
             // Toggle the visibility
             if (navLinks.style.display === 'none' || navLinks.style.display === '') {
               navLinks.style.display = 'block'; // Show the navigation links
             } else {
               navLinks.style.display = 'none'; // Hide the navigation links
             }
-          });
+            });
 
           // Common function to handle dropdowns with hover
           function setupDropdown(toggleButtonId, dropdownId) {
