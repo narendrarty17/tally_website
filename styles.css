@@ -442,9 +442,6 @@ p {
   #menu-bar {
     display: flex;
   }
-  .navigation-links-below-nav {
-    display: flex;
-  }
   .navigation-links {
     display: none;
   }

@@ -537,9 +537,6 @@ p {
   .navigation-links {
     display: none;
   }
-  .navigation-links-below-nav {
-    display: flex;
-  }
 }
 
 @media (max-width: 768px) {
