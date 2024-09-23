@@ -4,6 +4,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit; /* inherit the color from the parent */
+  font: inherit; /* inherit the font from the parent */
+  text-decoration: none; /* remove underline from links */
+  cursor: pointer; /* keep the pointer cursor */
+}
 body {
   font-family: "Helvetica Neue", helvetica, arial, sans-serif;
   line-height: 1.6rem;
@@ -136,7 +146,7 @@ a {
 a:hover {
   color: #4db5ef;
 }
-li a:hover {
+.link-below-nav:hover {
   color: white;
 }
 
