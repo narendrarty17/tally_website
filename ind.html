@@ -58,7 +58,7 @@
             const dropdown = document.getElementById(dropdownId);
 
             // Show dropdown on mouse enter
-            toggleButton.addEventListener('click', function () {
+            toggleButton.addEventListener('mouseenter', function () {
               closeAllDropdowns(); // Close all other dropdowns
               dropdown.style.display = 'block'; // Show current dropdown
             });
@@ -107,7 +107,9 @@
       <img class="company-logo" src="./img/izoe.svg" alt="Company Logo" />
       <div class="navigation-links">
         <div class="navigation-link">
-          <a href="https://izoe.in/">Home</a>
+          <button 
+            onclick="window.location.href='https://izoe.in'; return false;"
+          >Home</button>
         </div>
         <div class="navigation-link">
           <div id="nav-link-cloud" class="nav-link-header">
@@ -115,8 +117,21 @@
             <img width="12px" src="./img/navigation/openArrow.svg" alt="close" />
           </div>
           <ul id="nav-link-cloud-dropdown" class="nav-link-dropdown">
-            <li class="nav-sublink-top"><a href="https://izoe.in/services/office-on-cloud">Akounter Cloud</a></li>
-            <li class="nav-sublink-bottom"><a href="https://izoe.in/services/quickbooks">Quickbooks on Cloud</a></li>
+            <li class="nav-sublink-top">
+              <button
+                onclick="window.location.href='https://izoe.in/services/office-on-cloud'; return false;" 
+                href="https://izoe.in/services/office-on-cloud"
+              >
+                Akounter Cloud
+              </button>
+            </li>
+            <li class="nav-sublink-bottom">
+              <button
+                onclick="window.location.href='https://izoe.in/services/quickbooks'; return false;" 
+              >
+                Quickbooks on Cloud
+              </button>
+            </li>
           </ul>
         </div>
         <div class="navigation-link">
@@ -125,8 +140,18 @@
             <img width="12px" src="./img/navigation/openArrow.svg" alt="close" />
           </div>
           <ul id="nav-link-tally-dropdown" class="nav-link-dropdown">
-            <li class="nav-sublink-top"><a href="https://izoe.in/services/tally-on-cloud">Tally on Cloud</a></li>
-            <li class="nav-sublink-bottom"><a href="https://izoe.in/services/tally-license.html">Tally licence</a></li>
+            <li class="nav-sublink-top">
+              <button 
+                onclick="window.location.href='https://izoe.in/services/tally-on-cloud'; return false;"
+              >Tally on Cloud</button></li>
+            <li class="nav-sublink-bottom">
+              <button
+                onclick="window.location.href='https://izoe.in/services/tally-licence.html'; return false;" 
+                href="https://izoe.in/services/tally-license.html"
+              >
+                Tally licence
+              </button>
+            </li>
           </ul>
         </div>
         <div class="navigation-link">
