@@ -37,22 +37,31 @@ body {
   align-items: center;
   gap: 20px;
   font-size: 15px;
+  color: #5b5b5b;
 }
 .navigation-links-below-nav {
   width: 100%;
   background-color: white;
   display: none;
   flex-direction: column;
+  gap: 7px;
   align-items: flex-start;
   color: #5b5b5b;
+  margin-left: 6px;
+  margin-top: -45px;
 }
 .navigation-link-below-nav {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10%;
-  padding-right: 10%;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5%;
+  padding-right: 5%;
   width: 100%;
   cursor: pointer;
+}
+.navigation-link-below-nav a:hover {
+  color: #4db5ef;
 }
 .nav-link-header-below-nav {
   display: flex;
@@ -77,11 +86,19 @@ body {
   color: #5b5b5b;
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
+  padding-top: 0px;
   background-color: white;
   z-index: 20;
-  border-radius: 10px;
+  border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust values as needed */
+}
+.nav-sublink-top {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.nav-sublink-bottom {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 .nav-link-dropdown li {
   padding: 10px;
@@ -96,11 +113,13 @@ body {
   display: none;
   position: absolute;
   top: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 #nav-link-cloud-dropdown-below-nav,
 #nav-link-tally-dropdown-below-nav,
 #nav-link-cyber-dropdown-below-nav {
   display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 a {
   text-decoration: none; /* Removes underline */
@@ -145,13 +164,21 @@ li a:focus {
 #menu-bar {
   display: none;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+#menu-bar:focus {
+  border: 2px solid black;
+  border-radius: 5px;
 }
 .short-horizontal-line {
-  width: 30px;
+  width: 22px;
   height: 3px;
   background-color: black;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 p {
@@ -506,6 +533,9 @@ p {
   .nav-right p {
     font-size: 0.9rem;
   }
+  .navigation-links-below-nav {
+    display: flex;
+  }
   .tally-banner-container {
     margin-top: -30px;
     height: 460px;
@@ -515,7 +545,7 @@ p {
     font-size: 14px;
   }
   .company-logo {
-    max-width: 120px;
+    max-width: 150px;
   }
   .nav-right {
     font-size: 1.3rem;

@@ -37,6 +37,7 @@ body {
   align-items: center;
   gap: 20px;
   font-size: 15px;
+  color: #5b5b5b;
 }
 .navigation-link {
   display: flex;
@@ -53,14 +54,24 @@ body {
   cursor: pointer;
 }
 .nav-link-dropdown {
+  margin-top: 3px;
   list-style-type: none;
   color: #5b5b5b;
   display: flex;
-  padding-top: 10px;
+  flex-direction: column;
+  padding-top: 0px;
   background-color: white;
   z-index: 20;
-  border-radius: 10px;
+  border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust values as needed */
+}
+.nav-sublink-top {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.nav-sublink-bottom {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 .nav-link-dropdown li {
   padding: 10px;
@@ -117,6 +128,7 @@ li a:focus {
   flex-direction: column;
   align-items: flex-start;
   color: #5b5b5b;
+  gap: 7px;
 }
 .navigation-link-below-nav {
   padding-top: 10px;
@@ -125,6 +137,10 @@ li a:focus {
   padding-right: 10%;
   width: 100%;
   cursor: pointer;
+  margin-left: 6px;
+}
+.navigation-link-below-nav a:hover {
+  color: #4db5ef;
 }
 .nav-link-header-below-nav {
   display: flex;
@@ -141,12 +157,20 @@ li a:focus {
   display: none;
   flex-direction: column;
   gap: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+#menu-bar:focus {
+  border: 2px solid black;
+  border-radius: 5px;
 }
 .short-horizontal-line {
-  width: 30px;
+  width: 22px;
   height: 3px;
   background-color: black;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 p {
@@ -597,7 +621,7 @@ p {
     max-width: 100%;
   }
   .company-logo {
-    max-width: 120px;
+    max-width: 150px;
   }
   .navigation {
     padding-top: 6px;
