@@ -533,9 +533,6 @@ p {
   .nav-right p {
     font-size: 0.9rem;
   }
-  .navigation-links-below-nav {
-    display: flex;
-  }
   .tally-banner-container {
     margin-top: -30px;
     height: 460px;
